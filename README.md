@@ -59,7 +59,7 @@ Still TODO:
 
 To use `:focus-within` on parent elements of links to allow the focus outline to match the outline of the button links.
 
-As part of Jonas Schmedtmann's [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.udemy.com/course/the-complete-javascript-course/) course on Udemy, I have learnt in more detail how to work with the DOM and have a better understanding of how to implement scrolling and sticky navigation functionality. I decided to implement these functionalities in one of my own personal projects and felt this was a suitable project to do so. For this project I needed to alter the scrolling functionality so that it wouldn't scroll to the top of the viewport but to the bottom of the sticky navigation bar. I used ChatGPT to help me with modifying my code to get the correct positioning I wanted.
+As part of [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.udemy.com/course/the-complete-javascript-course/) course on Udemy, I have learnt in more detail how to work with the DOM and have a better understanding of how to implement scrolling and sticky navigation functionality. I decided to implement these functionalities in one of my own personal projects and felt this was a suitable project to do so. For this project I needed to alter the scrolling functionality so that it wouldn't scroll to the top of the viewport but to the bottom of the sticky navigation bar. I used ChatGPT to help me with modifying my code to get the correct positioning I wanted.
 
 ```js
 document.querySelector(".nav__list").addEventListener("click", function (e) {
@@ -86,14 +86,14 @@ Scrolling to bottom of sticky navigation:
 
 ### Continued development
 
-To improve my JavaScript knowledge and capabilities by completing Jonas Schmedtmann's [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.udemy.com/course/the-complete-javascript-course/) course.
+To improve my JavaScript knowledge and capabilities by completing [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.udemy.com/course/the-complete-javascript-course/) course.
 
 ### Useful resources
 
 - [CSS BEM Naming Methodology](https://getbem.com/naming/) - Official BEM site
 - [Ionicons](https://ionic.io/ionicons) - Free, open source icon library.
 - [Tint & Shade Generator](https://maketintsandshades.com/) - Free tool that calculates tints and shades for your default colour, to enable you to create a cohesive colour scheme.
-- [Jonas Schmedtmann's "The Complete JavaScript Course 2023: From Zero to Expert!"](https://www.udemy.com/course/the-complete-javascript-course/) - A paid for JavaScript course on Udemy.
+- [The Complete JavaScript Course 2023: From Zero to Expert!](https://www.udemy.com/course/the-complete-javascript-course/) - A paid for JavaScript course on Udemy.
 - [ChatGPT](https://chat.openai.com/auth/login) - AI tool. Useful for debugging and correcting code (but doesn't always answer correctly, so use with caution and thoroughly check the AI's suggestion).
 
 ## Author
