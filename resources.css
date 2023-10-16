@@ -1,0 +1,254 @@
+/* 
+--- COLOURS ---
+- Primary: #66BFBF
+- Tints: 
+#a3d9d9
+#f0f9f9
+- Shades: #3d7373
+- Greys:
+#555
+*/
+:root {
+  --text--color: #555;
+  --dark--color: #3d7373;
+  --medium--color: #a3d9d9;
+  --link--bg-color: #e0f2f2;
+  --light--color: #f0f9f9;
+  --h1--color: #fff;
+  --sticky-nav--bg-color: rgba(255, 255, 255, 0.95);
+  --box--shadow: rgba(61, 115, 115, 0.5);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--text--color);
+  font-size: 1.6rem;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem var(--box--shadow);
+}
+
+/*******************************/
+/* GENERAL REUSABLE COMPONENTS */
+/*******************************/
+
+.container {
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 4.8rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.icon {
+  color: var(--dark--color);
+}
+
+/*******************************/
+/*            HEADER           */
+/*******************************/
+
+.header__info {
+  background-image: linear-gradient(
+    to bottom,
+    var(--dark--color),
+    var(--medium--color)
+  );
+  color: var(--h1--color);
+  margin-bottom: 3.2rem;
+}
+
+.header__title {
+  font-size: 3.6rem;
+  font-weight: 600;
+  padding: 4.8rem;
+}
+
+.header__text {
+  padding: 0 3.2rem 3.2rem 3.2rem;
+  line-height: 1.8;
+}
+
+/*******************************/
+/* NAVIGATION & RESOURCE LINKS */
+/*******************************/
+
+.nav {
+  margin-bottom: 3.2rem;
+  padding: 0 3.2rem;
+}
+
+.nav.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: var(--sticky-nav--bg-color);
+  padding: 1.6rem 3.2rem;
+}
+
+.nav__list {
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.resource__link {
+  display: inline-block;
+  position: relative;
+}
+
+.nav__link,
+.resource__link {
+  padding: 0.8rem 2.4rem;
+}
+
+.nav__item,
+.resource__title {
+  border-radius: 4.8rem;
+  cursor: pointer;
+  background-color: var(--link--bg-color);
+}
+
+.nav__icon {
+  font-size: 2.4rem;
+}
+
+.nav__link:link,
+.nav__link:visited,
+.resource__link:link,
+.resource__link:visited {
+  text-decoration: none;
+}
+
+.nav__link:link,
+.nav__link:visited {
+  gap: 0.8rem;
+  color: var(--text--color);
+}
+
+.resource__link:link,
+.resource__link:visited {
+  color: var(--dark--color);
+}
+
+.nav__item:hover,
+.nav__item:active,
+.resource__title:hover,
+.resource__title:active {
+  background-color: var(--dark--color);
+  transition: all 0.3s;
+}
+
+.nav__item:hover .nav__link,
+.nav__item:hover .nav__icon,
+.nav__item:active .nav__link,
+.nav__item:active .nav__icon,
+.resource__title:hover .resource__link,
+.resource__title:active .resource__link {
+  color: var(--light--color);
+}
+
+/* focus-within targets element when any descendant has focus */
+.nav__item:focus-within,
+.resource__title:focus-within {
+  box-shadow: 0 0 0 0.2rem var(--box--shadow);
+}
+
+.nav__item:focus-within a,
+.resource__title:focus-within a {
+  box-shadow: none;
+}
+
+/*******************************/
+/*      RESOURCES SECTION      */
+/*******************************/
+
+.group {
+  padding: 3.2rem;
+}
+
+.group:nth-child(odd) {
+  background-color: var(--light--color);
+}
+
+.group__header {
+  gap: 0.8rem;
+  margin-bottom: 3.2rem;
+}
+
+.group__icon {
+  font-size: 3.6rem;
+}
+
+.group__title {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.resource__title {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+
+.resource__text {
+  line-height: 1.8;
+}
+
+.resource__text:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+
+.resource__price {
+  font-weight: 700;
+  font-style: italic;
+}
+
+/*******************************/
+/*        FOOTER SECTION       */
+/*******************************/
+
+footer {
+  background-color: var(--dark--color);
+  color: var(--h1--color);
+  padding: 1.6rem;
+}
