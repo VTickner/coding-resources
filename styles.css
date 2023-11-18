@@ -70,13 +70,6 @@ html {
 .grid {
   display: grid;
   gap: var(--48px);
-}
-
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -276,3 +269,13 @@ footer {
 /*******************************/
 /*     MOBILE SCREEN SIZE      */
 /*******************************/
+
+@media (max-width: 62em) {
+  /* @ 992px (breakpoint will need to be altered if add more sections)
+  - make menu buttons smaller to fit back on 2 lines
+  - change to 2 columns grid */
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
