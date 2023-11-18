@@ -24,6 +24,9 @@ As part of my coding journey, I've come across so many links that I bookmarked t
 Desktop:  
 ![Desktop screenshot](./img/desktop-screenshot.jpg)
 
+Mobile:
+<img src="./img/mobile-screenshot.jpg" height="350px" />
+
 ### Links
 
 - Solution URL: [https://github.com/VTickner/coding-resources](https://github.com/VTickner/coding-resources)
@@ -41,10 +44,9 @@ Desktop:
   - Smooth scrolling for menu navigation links.
   - Set current year in copyright statement.
 - Changed from using `font-size: 62.5%` technique to using CSS variables to hold size measurements that want to use with `rem` units.
-
-Still TODO:
-
-- Make page mobile responsive - add media queries to CSS.
+- Made page mobile responsive:
+  - Added media queries to CSS.
+  - Removed sticky navigation for smaller screens (when using 1 column grid)
 
 ### Built with
 
@@ -84,6 +86,39 @@ document.querySelector(".nav__list").addEventListener("click", function (e) {
 
 Scrolling to bottom of sticky navigation:  
 ![Sticky navigation screenshot](./img/sticky-nav-screenshot.jpg)
+
+I also needed to remove the sticky navigation bar for smaller screens, so checks needed to be added as to whether to add or remove the sticky navigation bar based also on the `window.innerWidth` size plus the observer needed to be re-run whenever the window is resized.
+
+```js
+const header = document.querySelector(".header");
+const nav = document.querySelector(".nav");
+const navHeight = nav.getBoundingClientRect().height;
+
+const isDesktopView = () => window.innerWidth >= 735;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting && isDesktopView()) nav.classList.add("sticky");
+  else nav.classList.remove("sticky");
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+
+headerObserver.observe(header);
+
+window.addEventListener("resize", function () {
+  if (isDesktopView()) {
+    headerObserver.observe(header);
+  } else {
+    nav.classList.remove("sticky");
+    headerObserver.unobserve(header);
+  }
+});
+```
 
 ### Continued development
 

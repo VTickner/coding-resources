@@ -4,9 +4,11 @@ const header = document.querySelector(".header");
 const nav = document.querySelector(".nav");
 const navHeight = nav.getBoundingClientRect().height;
 
+const isDesktopView = () => window.innerWidth >= 735;
+
 const stickyNav = function (entries) {
   const [entry] = entries;
-  if (!entry.isIntersecting) nav.classList.add("sticky");
+  if (!entry.isIntersecting && isDesktopView()) nav.classList.add("sticky");
   else nav.classList.remove("sticky");
 };
 
@@ -17,6 +19,16 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 
 headerObserver.observe(header);
+
+// Re-run the observer when the window is resized
+window.addEventListener("resize", function () {
+  if (isDesktopView()) {
+    headerObserver.observe(header);
+  } else {
+    nav.classList.remove("sticky");
+    headerObserver.unobserve(header);
+  }
+});
 ///////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////
