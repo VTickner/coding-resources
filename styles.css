@@ -8,6 +8,11 @@
 - Greys:
 #555
 */
+
+/*******************************/
+/*   COLOUR & SIZE VARIABLES   */
+/*******************************/
+
 :root {
   --text--color: #555;
   --dark--color: #3d7373;
@@ -27,6 +32,10 @@
   --48px: 3rem;
 }
 
+/*******************************/
+/*            RESET            */
+/*******************************/
+
 html {
   box-sizing: border-box;
 }
@@ -39,21 +48,13 @@ html {
   padding: 0;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-  line-height: 1;
-  font-weight: 400;
-  color: var(--text--color);
-  font-size: var(--16px);
-}
-
 *:focus {
   outline: none;
   box-shadow: 0 0 0 2px var(--box--shadow);
 }
 
 /*******************************/
-/* GENERAL REUSABLE COMPONENTS */
+/*     REUSABLE COMPONENTS     */
 /*******************************/
 
 .container {
@@ -89,6 +90,18 @@ body {
 
 .icon {
   color: var(--dark--color);
+}
+
+/*******************************/
+/*           GENERAL           */
+/*******************************/
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--text--color);
+  font-size: var(--16px);
 }
 
 /*******************************/
@@ -259,3 +272,7 @@ footer {
   color: var(--h1--color);
   padding: 16px;
 }
+
+/*******************************/
+/*     MOBILE SCREEN SIZE      */
+/*******************************/
