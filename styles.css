@@ -17,11 +17,18 @@
   --h1--color: #fff;
   --sticky-nav--bg-color: rgba(255, 255, 255, 0.95);
   --box--shadow: rgba(61, 115, 115, 0.5);
+
+  --8px: 0.5rem;
+  --16px: 1rem;
+  --24px: 1.5rem;
+  --30px: 1.875rem;
+  --32px: 2rem;
+  --36px: 2.25rem;
+  --48px: 3rem;
 }
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
 }
 
 *,
@@ -37,12 +44,12 @@ body {
   line-height: 1;
   font-weight: 400;
   color: var(--text--color);
-  font-size: 1.6rem;
+  font-size: var(--16px);
 }
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.2rem var(--box--shadow);
+  box-shadow: 0 0 0 2px var(--box--shadow);
 }
 
 /*******************************/
@@ -61,7 +68,7 @@ body {
 
 .grid {
   display: grid;
-  gap: 4.8rem;
+  gap: var(--48px);
 }
 
 .grid--2-cols {
@@ -95,17 +102,17 @@ body {
     var(--medium--color)
   );
   color: var(--h1--color);
-  margin-bottom: 3.2rem;
+  margin-bottom: var(--32px);
 }
 
 .header__title {
-  font-size: 3.6rem;
+  font-size: var(--36px);
   font-weight: 600;
-  padding: 4.8rem;
+  padding: 48px;
 }
 
 .header__text {
-  padding: 0 3.2rem 3.2rem 3.2rem;
+  padding: 0 32px 32px 32px;
   line-height: 1.8;
 }
 
@@ -114,8 +121,8 @@ body {
 /*******************************/
 
 .nav {
-  margin-bottom: 3.2rem;
-  padding: 0 3.2rem;
+  margin-bottom: var(--32px);
+  padding: 0 32px;
 }
 
 .nav.sticky {
@@ -123,11 +130,11 @@ body {
   top: 0;
   z-index: 100;
   background-color: var(--sticky-nav--bg-color);
-  padding: 1.6rem 3.2rem;
+  padding: 16px 32px;
 }
 
 .nav__list {
-  gap: 1.6rem;
+  gap: var(--16px);
   flex-wrap: wrap;
   list-style: none;
 }
@@ -139,18 +146,18 @@ body {
 
 .nav__link,
 .resource__link {
-  padding: 0.8rem 2.4rem;
+  padding: 8px 24px;
 }
 
 .nav__item,
 .resource__title {
-  border-radius: 4.8rem;
+  border-radius: 48px;
   cursor: pointer;
   background-color: var(--link--bg-color);
 }
 
 .nav__icon {
-  font-size: 2.4rem;
+  font-size: var(--24px);
 }
 
 .nav__link:link,
@@ -162,7 +169,7 @@ body {
 
 .nav__link:link,
 .nav__link:visited {
-  gap: 0.8rem;
+  gap: var(--8px);
   color: var(--text--color);
 }
 
@@ -191,7 +198,7 @@ body {
 /* focus-within targets element when any descendant has focus */
 .nav__item:focus-within,
 .resource__title:focus-within {
-  box-shadow: 0 0 0 0.2rem var(--box--shadow);
+  box-shadow: 0 0 0 2px var(--box--shadow);
 }
 
 .nav__item:focus-within a,
@@ -204,7 +211,7 @@ body {
 /*******************************/
 
 .group {
-  padding: 3.2rem;
+  padding: 32px;
 }
 
 .group:nth-child(odd) {
@@ -212,22 +219,22 @@ body {
 }
 
 .group__header {
-  gap: 0.8rem;
-  margin-bottom: 3.2rem;
+  gap: var(--8px);
+  margin-bottom: var(--32px);
 }
 
 .group__icon {
-  font-size: 3.6rem;
+  font-size: var(--36px);
 }
 
 .group__title {
-  font-size: 3rem;
+  font-size: var(--30px);
   font-weight: 400;
 }
 
 .resource__title {
   display: inline-block;
-  margin-bottom: 0.8rem;
+  margin-bottom: var(--8px);
 }
 
 .resource__text {
@@ -235,7 +242,7 @@ body {
 }
 
 .resource__text:not(:last-child) {
-  margin-bottom: 0.8rem;
+  margin-bottom: var(--8px);
 }
 
 .resource__price {
@@ -250,5 +257,5 @@ body {
 footer {
   background-color: var(--dark--color);
   color: var(--h1--color);
-  padding: 1.6rem;
+  padding: 16px;
 }

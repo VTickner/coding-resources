@@ -40,6 +40,7 @@ Desktop:
   - Sticky navigation for menu navigation links.
   - Smooth scrolling for menu navigation links.
   - Set current year in copyright statement.
+- Changed from using `font-size: 62.5%` technique to using CSS variables to hold size measurements that want to use with `rem` units.
 
 Still TODO:
 
