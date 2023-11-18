@@ -24,8 +24,11 @@
   --box--shadow: rgba(61, 115, 115, 0.5);
 
   --8px: 0.5rem;
+  --12px: 0.75rem;
   --16px: 1rem;
+  --20px: 1.25rem;
   --24px: 1.5rem;
+  --26px: 1.625rem;
   --30px: 1.875rem;
   --32px: 2rem;
   --36px: 2.25rem;
@@ -272,10 +275,96 @@ footer {
 
 @media (max-width: 62em) {
   /* @ 992px (breakpoint will need to be altered if add more sections)
-  - make menu buttons smaller to fit back on 2 lines
+  - make padding and gap on menu buttons smaller to fit back on 2 lines
   - change to 2 columns grid */
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav__list {
+    gap: var(--12px);
+  }
+
+  .nav__link,
+  .resource__link {
+    padding: 6px 12px;
+  }
+
+  .nav__icon {
+    font-size: var(--20px);
+  }
+}
+
+@media (max-width: 50.25em) {
+  /* @ 804px (breakpoint will need to be altered if add more sections)
+  - reduce size of titles
+  - reduce other white-space gaps
+  @788px leave menu buttons on 3 lines */
+
+  .grid {
+    gap: var(--32px);
+  }
+
+  .header__info {
+    margin-bottom: var(--24px);
+  }
+
+  .header__title {
+    font-size: var(--32px);
+    padding: 32px;
+  }
+
+  .header__text {
+    padding: 0 24px 24px 24px;
+    line-height: 1.6;
+  }
+
+  .nav {
+    margin-bottom: var(--24px);
+    padding: 0 24px;
+  }
+
+  .nav.sticky {
+    padding: 12px 24px;
+  }
+
+  .group {
+    padding: 24px;
+  }
+
+  .group__header {
+    gap: var(--8px);
+    margin-bottom: var(--24px);
+  }
+
+  .group__icon {
+    font-size: var(--32px);
+  }
+
+  .group__title {
+    font-size: var(--26px);
+  }
+
+  .resource__title {
+    margin-bottom: var(--8px);
+  }
+
+  .resource__text {
+    line-height: 1.6;
+  }
+
+  .resource__text:not(:last-child) {
+    margin-bottom: var(--8px);
+  }
+}
+
+@media (max-width: 45.875em) {
+  /* @ 734px (breakpoint will need to be altered if add more sections)
+  - resource__title can be over more than one line change to 1 column grid
+  - @ the breakpoint of 1 grid column don't use sticky navigation (change script.js) */
+
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
